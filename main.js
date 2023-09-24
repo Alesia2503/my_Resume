@@ -23,31 +23,34 @@ document.querySelector('.btn_7').onclick = function(e) {
 
 
 //подсказки для кнопок
-let tooltipElem;
-    document.onmouseover = function(e) {
-        let target = e.target
-        let tooltipHtml = target.dataset.tooltip
-        if(!tooltipHtml) return
-        tooltipElem = document.createElement('div')
-        tooltipElem.className = "tooltip"
-        tooltipElem.innerHTML = tooltipHtml
-        document.querySelector('.form_btn').append(tooltipElem)
-        let coords = target.getBoundingClientRect()
-        let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2
-        if(left < 0) left = 5 
+// let tooltipElem;
+//     document.onmouseover = function(e) {
+//       if (window.matchMedia('(max-width:900px)').matches) {return false;}
 
-        let top = coords.top - tooltipElem.offsetHeight - 25
-        if(top < 0) top = coords.top + target.offsetHeight + 5
+//         let target = e.target
+//         let tooltipHtml = target.dataset.tooltip
+//         if(!tooltipHtml) return
+//         tooltipElem = document.createElement('div')
+//         tooltipElem.className = "tooltip"
+//         tooltipElem.innerHTML = tooltipHtml
+//         document.querySelector('.form_btn').append(tooltipElem)
+//         let coords = target.getBoundingClientRect()
+//         let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2
+//         if(left < 0) left = 5 
 
-        tooltipElem.style.left = left + 'px'
-        tooltipElem.style.top = top + 'px'
-    }
-    document.onmouseout = function(e) {
-        if(tooltipElem) {
-        tooltipElem.remove()
-        tooltipElem = null
-        }
-    }
+//         let top = coords.top - tooltipElem.offsetHeight - 25
+//         if(top < 0) top = coords.top + target.offsetHeight + 5
+
+//         tooltipElem.style.left = left + 'px'
+//         tooltipElem.style.top = top + 'px'
+//     }
+//     document.onmouseout = function(e) {
+//         if(tooltipElem) {
+//         tooltipElem.remove()
+//         tooltipElem = null
+//         }
+
+//     }
 
 
 //увеличение фотографии
